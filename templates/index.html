@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    
+    <div class="row">
+        <div class="col-md-5">
+            {% include('partials/_message.html') %}
+            {% include('partials/_form_contact.html') %}
+        </div>
+        
+        <div class="col-md-7">
+            {% for contact in contacts %}
+                {% include('partials/_card_contact.html') %}
+            {% endfor %}
+        </div>
+    </div>
+    
+{% endblock %}

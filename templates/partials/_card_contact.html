@@ -1,0 +1,14 @@
+<div class="card mb-1 text-white shadow" style="background-color: #031a3e;">
+    <div class="card-body">
+        <div class="d-flex justify-content-between">
+            <h5>{{contact.name}}</h5>
+            <div>
+                <a href="{{ url_for('contact.update_contact', id=contact.id) }}" class="btn btn-dark btn-sm rounded-0">Actualizar</a>
+                <a href="{{ url_for('contact.delete_contact', id=contact.id) }}" class="btn btn-danger btn-sm rounded-0">Eliminar</a>
+            </div>
+        </div>
+        <p>{{contact.last_name}}</p>
+        <p>{{contact.email}}</p>
+        <p>{{contact.phone}}</p>
+    </div>  
+</div>

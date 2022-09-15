@@ -1,0 +1,12 @@
+body{
+    background-color: #121212;
+    background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)) , url(assets/contact.jpg);    
+}
+
+.bg-black{
+    background: #090909;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

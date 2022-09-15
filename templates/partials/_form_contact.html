@@ -1,0 +1,53 @@
+<form action="/new" method="POST" class="card bg-dark text-light needs-validation" novalidate>
+    <div class="card-body p-4">
+        <div class="mb-4">
+            <label for="name" class="form-label">Nombre:</label>
+                <input id="name" type="text" name="name" placeholder="Escribe el nombre..." class="form-control rounded-0
+                bg-dark border-0 text-white" required> 
+
+            <div class="invalid-feedback"> Escribe un nombre </div>
+        </div>
+        <div class="mb-4">
+            <label for="last_name" class="form-label">Apellido:</label>
+            <input id="last_name" type="text" name="last_name" placeholder="Escribe tu apellido..." class="form-control rounded-0
+            bg-dark border-0 text-white" required>
+
+            <div class="invalid-feedback"> Escribe un apellido </div>
+        </div>
+        <div class="mb-4">
+            <label for="email" class="form-label">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Escribe tu correo..." class="form-control rounded-0
+            bg-dark border-0 text-white" required>
+
+            <div class="invalid-feedback"> Escribe un correo </div>
+        </div>
+        <div class="mb-4">
+            <label for="phone" class="form-label">Celular:</label>
+            <input id="phone" type="text" name="phone" placeholder="Escribe tu celular..." class="form-control rounded-0
+            bg-dark border-0 text-white" required>
+            <div class="invalid-feedback"> Escribe un número celular </div>
+        </div>
+        <button class="btn btn-secondary" type="submit">Guardar</button>
+    </div>
+
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</form>
